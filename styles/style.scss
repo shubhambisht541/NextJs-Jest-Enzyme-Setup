@@ -1,0 +1,75 @@
+@import 'variables';
+
+body, html {
+  height: 100%;
+  background-color: $color_grey_light;
+  font-family: arial;
+  #__next {
+  	display: flex;
+  	justify-content: center;
+		align-items: center;
+		height: 100%;
+	  .chat {
+			max-width: 800px;
+			width: 90%;
+			height: 70%;
+			min-height: 400px;
+			background-color: $color_white;
+			border-radius: 4px;
+			display: flex;
+			flex-direction: column;
+			.message-list {
+				padding: 0 5px;
+				margin: 10px;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				overflow: auto;
+				flex: 1;
+				li {
+					list-style-type: none;
+					padding: 10px 15px;
+					margin: 5px 0;
+					color: $color_grey_dark;
+					background-color: $color_grey_light;
+					border-radius: 4px;
+				}
+			}
+			.message-form {
+				display: flex;
+				height: 50px;
+		    margin: 15px;
+				input {
+					flex: 1;
+					border: none;
+					color: $color_grey_dark;
+					border-bottom: 1px solid $color_grey_dark;
+					font-size: $font-size;
+					margin-right: 10px;
+					outline: none;
+				}
+				button {
+					background-color: $color_blue;
+					border-radius: 4px;
+					border: none;
+					color: $color_white;
+					font-size: $font_size;
+					width: 100px;
+					cursor: pointer;
+					outline: none;
+					&:hover {
+						opacity: 0.9;
+					}
+					&:active {
+						opacity: 1;
+					}
+					&:disabled {
+						opacity: 0.3;
+						background-color: $color_grey_dark;
+						cursor: default;
+					}
+				}
+			}
+		}
+	}
+}
