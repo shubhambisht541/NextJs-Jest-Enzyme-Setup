@@ -97,14 +97,13 @@ module.exports =
 /*!**************************!*\
   !*** ./actions/index.js ***!
   \**************************/
-/*! exports provided: updateMessageList, loadMessageList, resetMessageList */
+/*! exports provided: updateMessageList, loadMessageList */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateMessageList", function() { return updateMessageList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMessageList", function() { return loadMessageList; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resetMessageList", function() { return resetMessageList; });
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types */ "./actions/types.js");
 
 function updateMessageList(data) {
@@ -122,13 +121,6 @@ function loadMessageList() {
     });
   };
 }
-function resetMessageList() {
-  return function (dispatch, getStore) {
-    dispatch({
-      type: _types__WEBPACK_IMPORTED_MODULE_0__["RESET_MESSAGE_LIST"]
-    });
-  };
-}
 
 /***/ }),
 
@@ -136,17 +128,15 @@ function resetMessageList() {
 /*!**************************!*\
   !*** ./actions/types.js ***!
   \**************************/
-/*! exports provided: UPDATE_MESSAGE_LIST, RESET_MESSAGE_LIST, LOAD_MESSAGE_LIST */
+/*! exports provided: UPDATE_MESSAGE_LIST, LOAD_MESSAGE_LIST */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_MESSAGE_LIST", function() { return UPDATE_MESSAGE_LIST; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RESET_MESSAGE_LIST", function() { return RESET_MESSAGE_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_MESSAGE_LIST", function() { return LOAD_MESSAGE_LIST; });
 // Index
 var UPDATE_MESSAGE_LIST = 'UPDATE_MESSAGE_LIST';
-var RESET_MESSAGE_LIST = 'RESET_MESSAGE_LIST';
 var LOAD_MESSAGE_LIST = 'LOAD_MESSAGE_LIST';
 
 /***/ }),

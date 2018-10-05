@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {updateMessageList, resetMessageList} from '../actions/'
+import {updateMessageList} from '../actions/'
 import MessageList from '../components/messageList'
 import '../styles/style.scss'
 

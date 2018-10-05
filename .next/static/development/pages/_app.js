@@ -4,17 +4,15 @@
 /*!**************************!*\
   !*** ./actions/types.js ***!
   \**************************/
-/*! exports provided: UPDATE_MESSAGE_LIST, RESET_MESSAGE_LIST, LOAD_MESSAGE_LIST */
+/*! exports provided: UPDATE_MESSAGE_LIST, LOAD_MESSAGE_LIST */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_MESSAGE_LIST", function() { return UPDATE_MESSAGE_LIST; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RESET_MESSAGE_LIST", function() { return RESET_MESSAGE_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_MESSAGE_LIST", function() { return LOAD_MESSAGE_LIST; });
 // Index
 var UPDATE_MESSAGE_LIST = 'UPDATE_MESSAGE_LIST';
-var RESET_MESSAGE_LIST = 'RESET_MESSAGE_LIST';
 var LOAD_MESSAGE_LIST = 'LOAD_MESSAGE_LIST';
 
 /***/ }),
@@ -11841,11 +11839,6 @@ function indexReducer() {
     case _actions_types__WEBPACK_IMPORTED_MODULE_0__["LOAD_MESSAGE_LIST"]:
       return _objectSpread({}, state, {
         messageList: JSON.parse(localStorage.getItem("chat"))
-      });
-
-    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["RESET_MESSAGE_LIST"]:
-      return _objectSpread({}, state, {
-        messageList: INITIAL_STATE.messageList
       });
 
     default:
