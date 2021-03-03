@@ -112,7 +112,7 @@ module.exports = __webpack_require__(/*! next/document */ "next/document")
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ironman/Documents/projects/nextjs/node_modules/next/dist/pages/_document.js */"./node_modules/next/dist/pages/_document.js");
+module.exports = __webpack_require__(/*! /home/daffolap-398/Desktop/Nextjs-Redux-Jest-Enzyme/node_modules/next/dist/pages/_document.js */"./node_modules/next/dist/pages/_document.js");
 
 
 /***/ }),

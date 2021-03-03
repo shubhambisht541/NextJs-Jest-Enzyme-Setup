@@ -41,7 +41,7 @@ class Index extends Component {
             onChange={this.handleMessageChange} />
           <button
             type={'submit'}
-            disabled={!message}>Enviar</button>
+            disabled={!message}>Send</button>
         </form>
       </div>
     );

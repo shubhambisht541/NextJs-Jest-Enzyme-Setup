@@ -16,6 +16,10 @@ describe('When the index page is loaded', () => {
     wrapper = shallow(<App store={store} />).dive();
   })
 
+  it('renders correctly', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('Should render one <MessageList> component', () => {
     expect(wrapper.find(MessageList)).toHaveLength(1);
   })

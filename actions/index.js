@@ -10,7 +10,5 @@ export function updateMessageList(data) {
 }
 
 export function loadMessageList() {
-  return (dispatch, getStore) => {
-  	dispatch({ type: LOAD_MESSAGE_LIST });
-	};
+  return ({ type: LOAD_MESSAGE_LIST });
 }

@@ -115,10 +115,8 @@ function updateMessageList(data) {
   };
 }
 function loadMessageList() {
-  return function (dispatch, getStore) {
-    dispatch({
-      type: _types__WEBPACK_IMPORTED_MODULE_0__["LOAD_MESSAGE_LIST"]
-    });
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_0__["LOAD_MESSAGE_LIST"]
   };
 }
 
@@ -152,12 +150,14 @@ var LOAD_MESSAGE_LIST = 'LOAD_MESSAGE_LIST';
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _actions___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/ */ "./actions/index.js");
-/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/style.scss */ "./styles/style.scss");
-/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_style_scss__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/ironman/Documents/projects/nextjs/components/messageList.js";
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _actions___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../actions/ */ "./actions/index.js");
+/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/style.scss */ "./styles/style.scss");
+/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_style_scss__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "/home/daffolap-398/Desktop/Nextjs-Redux-Jest-Enzyme/components/messageList.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -184,6 +184,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var MessageList =
 /*#__PURE__*/
 function (_Component) {
@@ -204,7 +205,7 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "scrollToBottom", function () {
       var list = document.querySelector('.message-list');
-      list.scrollTo(0, list.scrollHeight);
+      list && list.scrollTo(0, list.scrollHeight);
     });
 
     return _this;
@@ -214,7 +215,7 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var dispatch = this.props.dispatch;
-      dispatch(Object(_actions___WEBPACK_IMPORTED_MODULE_2__["loadMessageList"])());
+      dispatch(Object(_actions___WEBPACK_IMPORTED_MODULE_3__["loadMessageList"])());
       this.scrollToBottom();
     }
   }, {
@@ -232,7 +233,7 @@ function (_Component) {
         className: "message-list",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 30
         },
         __self: this
       }, messageList && messageList.map(function (item, index, array) {
@@ -240,7 +241,7 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30
+            lineNumber: 31
           },
           __self: this
         }, item);
@@ -251,13 +252,20 @@ function (_Component) {
   return MessageList;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
+MessageList.defaultProps = {
+  messageList: []
+};
+MessageList.propTypes = {
+  messageList: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array
+};
+
 var mapStateToProps = function mapStateToProps(state) {
   return {
     messageList: state.messageList
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(MessageList));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(MessageList));
 
 /***/ }),
 
@@ -278,7 +286,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_messageList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/messageList */ "./components/messageList.js");
 /* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/style.scss */ "./styles/style.scss");
 /* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_style_scss__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/ironman/Documents/projects/nextjs/pages/index.js";
+var _jsxFileName = "/home/daffolap-398/Desktop/Nextjs-Redux-Jest-Enzyme/pages/index.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -384,7 +392,7 @@ function (_Component) {
           lineNumber: 42
         },
         __self: this
-      }, "Enviar")));
+      }, "Send")));
     }
   }]);
 
@@ -415,6 +423,17 @@ function (_Component) {
 
 module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "prop-types":
+/*!*****************************!*\
+  !*** external "prop-types" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("prop-types");
 
 /***/ }),
 

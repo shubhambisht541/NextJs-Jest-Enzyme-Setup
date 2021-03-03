@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux'
 import {loadMessageList} from '../actions/'
 import '../styles/style.scss'
@@ -19,7 +20,7 @@ class MessageList extends Component {
 
   scrollToBottom = () => {
     const list = document.querySelector('.message-list');
-    list.scrollTo(0, list.scrollHeight);
+    list && list.scrollTo(0, list.scrollHeight);
   }
 
   render() {
@@ -32,6 +33,14 @@ class MessageList extends Component {
     );
   }
 }
+
+MessageList.defaultProps = {
+ messageList: []
+};
+
+MessageList.propTypes = {
+  messageList : PropTypes.array
+};
 
 const mapStateToProps = state => ({
   messageList: state.messageList,

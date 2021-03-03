@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When the index page is loaded renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Index
+    dispatch={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Connect(MessageList) />,
+        <form
+          className="message-form"
+          onSubmit={[Function]}
+        >
+          <input
+            onChange={[Function]}
+            placeholder="Type your message"
+            type="text"
+            value=""
+          />
+          <button
+            disabled={true}
+            type="submit"
+          >
+            Send
+          </button>
+        </form>,
+      ],
+      "className": "chat",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              onChange={[Function]}
+              placeholder="Type your message"
+              type="text"
+              value=""
+            />,
+            <button
+              disabled={true}
+              type="submit"
+            >
+              Send
+            </button>,
+          ],
+          "className": "message-form",
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "onChange": [Function],
+              "placeholder": "Type your message",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Send",
+              "disabled": true,
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": "Send",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Connect(MessageList) />,
+          <form
+            className="message-form"
+            onSubmit={[Function]}
+          >
+            <input
+              onChange={[Function]}
+              placeholder="Type your message"
+              type="text"
+              value=""
+            />
+            <button
+              disabled={true}
+              type="submit"
+            >
+              Send
+            </button>
+          </form>,
+        ],
+        "className": "chat",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                onChange={[Function]}
+                placeholder="Type your message"
+                type="text"
+                value=""
+              />,
+              <button
+                disabled={true}
+                type="submit"
+              >
+                Send
+              </button>,
+            ],
+            "className": "message-form",
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "onChange": [Function],
+                "placeholder": "Type your message",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Send",
+                "disabled": true,
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": "Send",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
