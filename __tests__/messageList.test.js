@@ -30,12 +30,22 @@ describe("<MessageList /> rendering ", () => {
         expect(wrapper.find('ul').hasClass('message-list')).toBe(true);
     })
 
+    it("testing initial messageList props", () => {
+        expect(wrapper.instance().props.messageList).toEqual([]);
+    })
+
+    it('componentDidUpdate',() => {
+        wrapper.instance().scrollToBottom = jest.fn();
+        wrapper.setProps({messageList: [{ id:'test1', message:'message1'}]})
+        expect(wrapper.instance().scrollToBottom).toHaveBeenCalledTimes(1);
+    })
+
 })
 
 describe('rendering on basis of messageList data', () => {   
 
     it('no <li> render in case messageList is empty', () => {
-        expect(wrapper.props().messageList).toBe(undefined);
+        expect(wrapper.instance().props.messageList).toEqual([]);
         expect(wrapper.find('li')).toHaveLength(0);
     })
 
@@ -45,4 +55,6 @@ describe('rendering on basis of messageList data', () => {
     })
 
 })
+
+
 
