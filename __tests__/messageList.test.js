@@ -4,18 +4,19 @@ import renderer from 'react-test-renderer'
 import configureStore from 'redux-mock-store'
 import MessageList from '../components/messageList'
 
-describe("<MessageList /> rendering ", () => {
-    let wrapper,store;
-    const initialState = {}
-    const mockStore = configureStore()
-    const props = {
-        messageList:[]
-    }    
+const initialState = {}
+const mockStore = configureStore()
+const defaultProps = {
+    messageList:[]
+} 
+let wrapper,store;
 
-    beforeEach(() => {
-        store = mockStore(initialState)
-        wrapper = shallow(<MessageList store={store} {...props}/>).dive()
-    })
+beforeEach(() => {
+    store = mockStore(initialState)
+    wrapper = shallow(<MessageList store={store} {...defaultProps} />).dive()
+})
+
+describe("<MessageList /> rendering ", () => {
 
     it("renders correctly with defualt props", () => {
         expect(wrapper).toMatchSnapshot();
@@ -31,18 +32,7 @@ describe("<MessageList /> rendering ", () => {
 
 })
 
-describe('rendering on basis of messageList data', () => {
-    let wrapper,store;
-    const initialState = {}
-    const mockStore = configureStore()
-    const props = {
-        messageList:[]
-    }    
-
-    beforeEach(() => {
-        store = mockStore(initialState)
-        wrapper = shallow(<MessageList store={store} {...props}/>).dive()
-    })
+describe('rendering on basis of messageList data', () => {   
 
     it('no <li> render in case messageList is empty', () => {
         expect(wrapper.props().messageList).toBe(undefined);
